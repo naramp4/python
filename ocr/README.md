@@ -22,40 +22,60 @@ python3, 구글 계정, 해외 결제가 되는 카드(신용카드 또는 체�
 
 - [Google Vision API](https://cloud.google.com/vision/?hl=ko) 접속 후 무료로 사용해보기 버튼 클릭
 
+---
+
 ![](./readme_img/3-ca90889f-21ac-4543-b863-86757b18bfbb.png)
 
 - 서비스 약관 및 이메일로 정보 수신 여부 선택 후 AGREE AND CONTINUE 버튼 클릭
+
+---
 
 ![](./readme_img/4-e7158275-fc16-4a8a-b499-d7c6f840aead.png)
 
 - 고객 정보에 빨간 줄을 필수 값으로 입력 후 가입
 - 결제 수단인 카드 정보도 입력해야 함
 
+---
+
 ![](./readme_img/5-07da49e6-8ef6-4e54-8bd8-32af96c10716.png)
 
 - 가입이 완료 되었으면 Google Cloude Platform의 왼쪽메뉴에서 인공지능 > Vision 클릭
+
+---
 
 ![](./readme_img/6-1ad44c7b-bc27-47d8-87b0-48c02e2c4377.png)
 
 - Use the pre-trained model의 Learn about the Vision API 클릭
 
+---
+
 ![](./readme_img/7-d7774bf0-2675-41e8-ba9a-f38e0b47ef3d.png)
 
 - 사용설정 버튼 클릭
+
+---
 
 ![](./readme_img/8-bf4640a1-4487-4526-b7b5-9133fa242dca.png)
 
 - 사용자 인증 정보 만들기 클릭
 
+---
+
 ![](./readme_img/9-2f157cba-8176-45b5-9f9b-a0ce2cf6ba97.png)
 
 - Cloud Vision API, 아니요 선택 후 '어떤 사용자 인증 정보가 필요한가요?' 버튼 클릭
+
+---
 
 ![](./readme_img/10-e9cccec9-6341-4f91-b816-bcfee5bf45d3.png)
 
 - 서비스 계정 이름 및 ID 입력, JSON 선택 후 계속 클릭
 
+---
+
 JSON 파일 다운 완료가 되면 준비물 완성 !!!!
+
+---
 
 ## 폴더 구조
 
@@ -67,9 +87,11 @@ JSON 파일 다운 완료가 되면 준비물 완성 !!!!
 
 위 폴더 위치에서 Terminal 실행 후
 
+~~~bash
     export GOOGLE_APPLICATION_CREDENTIALS="인증파일 JSON 위치"
     예)
     export GOOGLE_APPLICATION_CREDENTIALS="./My First Project-c13a79533674.json"
+~~~
 
 이후 jupyter notebook 실행
 
