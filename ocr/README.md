@@ -97,19 +97,19 @@ export GOOGLE_APPLICATION_CREDENTIALS="./My First Project-c13a79533674.json"
 - 필요한 모듈 불러오기
 
 ~~~python
-    import io # 파일을 읽고 쓰기위한 모듈
-    import os # os의 기능을 사용하기 위한 모듈
+import io # 파일을 읽고 쓰기위한 모듈
+import os # os의 기능을 사용하기 위한 모듈
 
-    # Imports the Google Cloud client library
-    from google.cloud import vision
-    from google.cloud.vision import types
+# Imports the Google Cloud client library
+from google.cloud import vision
+from google.cloud.vision import types
 ~~~
 
 - 필요 변수 설정
 
 ~~~python
-    client = vision.ImageAnnotatorClient()
-    filenames = os.listdir('./book_img') # book_img 아래에 있는 이미지 파일 이름을 불러오기
+client = vision.ImageAnnotatorClient()
+filenames = os.listdir('./book_img') # book_img 아래에 있는 이미지 파일 이름을 불러오기
 ~~~
 
 - book_img 아래의 파일을 읽은 후 같은 이름의 txt 포맷으로 book_txt에 저장
