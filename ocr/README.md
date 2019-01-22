@@ -4,13 +4,9 @@
 
 스캔 혹은 스크린샷 되어 있는 그림 안에 글자를 우리가 편집할 수 있는 텍스트로 변환
 
-![](./readme_img/hello-486a0821-d0fa-4f57-8a14-f0d8e9bed0e7.png)
+![](./readme_img/hello-486a0821-d0fa-4f57-8a14-f0d8e9bed0e7.png) ![](./readme_img/2019-01-172-47369ec2-cb34-43d6-ab80-16aa779479d5.35.25.png)
+스크린샷 이미지와 OCR이후 텍스트
 
-image
-
-![](./readme_img/2019-01-172-47369ec2-cb34-43d6-ab80-16aa779479d5.35.25.png)
-
-txt
 
 ## 준비물
 
@@ -136,6 +132,7 @@ for filename in filenames:
 ## 결과 화면
 
 ![](./readme_img/hello-486a0821-d0fa-4f57-8a14-f0d8e9bed0e7.png) ![](./readme_img/2019-01-172-47369ec2-cb34-43d6-ab80-16aa779479d5.35.25.png)
+스크린샷 이미지와 OCR이후 텍스트
 
 
 위와 같은 방법으로 스캔 되어 있는 600page를 한번에 OCR를 해보았는데 생각보다 인식률이 좋게 나와 공유하는 차원에 포스팅을 해보았다.
