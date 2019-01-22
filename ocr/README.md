@@ -88,9 +88,9 @@ JSON 파일 다운 완료가 되면 준비물 완성 !!!!
 위 폴더 위치에서 Terminal 실행 후
 
 ~~~bash
-    export GOOGLE_APPLICATION_CREDENTIALS="인증파일 JSON 위치"
-    예)
-    export GOOGLE_APPLICATION_CREDENTIALS="./My First Project-c13a79533674.json"
+export GOOGLE_APPLICATION_CREDENTIALS="인증파일 JSON 위치"
+예)
+export GOOGLE_APPLICATION_CREDENTIALS="./My First Project-c13a79533674.json"
 ~~~
 
 이후 jupyter notebook 실행
@@ -99,43 +99,44 @@ JSON 파일 다운 완료가 되면 준비물 완성 !!!!
 
 - 필요한 모듈 불러오기
 
+~~~python
     import io # 파일을 읽고 쓰기위한 모듈
     import os # os의 기능을 사용하기 위한 모듈
 
     # Imports the Google Cloud client library
     from google.cloud import vision
     from google.cloud.vision import types
+~~~
 
 - 필요 변수 설정
 
+~~~python
     client = vision.ImageAnnotatorClient()
     filenames = os.listdir('./book_img') # book_img 아래에 있는 이미지 파일 이름을 불러오기
+~~~
 
 - book_img 아래의 파일을 읽은 후 같은 이름의 txt 포맷으로 book_txt에 저장
 
-    for filename in filenames:
-        path = os.path.join('./book_img', filename)
+~~~python
+for filename in filenames:
+    path = os.path.join('./book_img', filename)
 
-        # Loads the image into memory
-        with io.open(path, 'rb') as image_file:
-            content = image_file.read()
+    # Loads the image into memory
+    with io.open(path, 'rb') as image_file:
+        content = image_file.read()
 
-        image = vision.types.Image(content=content)
-        response = client.text_detection(image=image)
-        texts = response.text_annotations
+    image = vision.types.Image(content=content)
+    response = client.text_detection(image=image)
+    texts = response.text_annotations
 
-        with open('./book_txt/'+filename[0:-4]+'.txt', "w") as f:
-            f.write(texts[0].description)
+    with open('./book_txt/'+filename[0:-4]+'.txt', "w") as f:
+        f.write(texts[0].description)
+~~~
 
 ## 결과 화면
 
-![](./readme_img/hello-486a0821-d0fa-4f57-8a14-f0d8e9bed0e7.png)
+![](./readme_img/hello-486a0821-d0fa-4f57-8a14-f0d8e9bed0e7.png) ![](./readme_img/2019-01-172-47369ec2-cb34-43d6-ab80-16aa779479d5.35.25.png)
 
-image
-
-![](./readme_img/2019-01-172-47369ec2-cb34-43d6-ab80-16aa779479d5.35.25.png)
-
-txt
 
 위와 같은 방법으로 스캔 되어 있는 600page를 한번에 OCR를 해보았는데 생각보다 인식률이 좋게 나와 공유하는 차원에 포스팅을 해보았다.
 
